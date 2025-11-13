@@ -1,0 +1,50 @@
+# Environment & Secrets
+*.env
+.envrc
+
+# Go Build Artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+/bin/
+/dist/
+/tmp/
+
+# Generated Code (keep out of git)
+*_templ.go
+/internal/db/*.go
+/db/*.go
+
+# Air (live reload) temporary files
+/tmp/
+
+# Dependencies (if vendored)
+/vendor/
+
+# Large files / Logs
+*.log
+*.log.*
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node modules (if using npm for HTMX/frontend deps)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Compiled CSS (if using Tailwind)
+/static/css/output.css
+/public/css/output.css
+
+# SQLite Database (never commit the database file)
+*.db
+*.db-shm
+*.db-wal
