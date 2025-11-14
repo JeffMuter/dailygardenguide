@@ -23,7 +23,7 @@ func main() {
 
 	// Start server
 	addr := fmt.Sprintf(":%s", port)
-	log.Printf("🌱 Daily Garden Guide server starting on http://localhost%s", addr)
+	log.Printf("Daily Garden Guide server starting on http://localhost%s", addr)
 	if err := http.ListenAndServe(addr, mux); err != nil {
 		log.Fatalf("Server failed to start: %v", err)
 	}
