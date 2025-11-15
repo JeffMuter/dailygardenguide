@@ -27,6 +27,8 @@ pkgs.mkShell {
     sqlc               # Type-safe SQL query generation
     sqlite             # SQLite database (latest available in nixpkgs)
     sqlite-interactive # Interactive SQLite shell
+    stylua
+      #    nodePackages.sql-formatter
 
     # Template & frontend tools
     templ              # Go template compiler

@@ -1,0 +1,19 @@
+{
+  "connections": [
+    {
+      "name": "dailygardenguide",
+      "adapter": "sqlite3",
+      "filename": "./dailygardenguide.db",
+      "projectPaths": ["/home/emerald/repos/dailygardenguide"]
+    }
+  ],
+  "lint": {
+    "rules": {
+      "align-column-to-the-specification": "off",
+      "reserved-word-case": "off",
+      "space-surrounding-operators": "off",
+      "where-require-parenthesis": "off",
+      "align-where-clause-to-the-right": "off"
+    }
+  }
+}
