@@ -85,7 +85,7 @@ Write SQL in `db/queries/*.sql`, run `gen` to create type-safe Go functions.
 **Required:**
 - `ANTHROPIC_API_KEY`
 - `OPENWEATHER_API_KEY`
-- `DATABASE_URL` (default: `file:./dailygardenguide.db`)
+- `DATABASE_URL` (default: `file:./garden.db`)
 
 **Optional:**
 - `PORT` (default: 8080)

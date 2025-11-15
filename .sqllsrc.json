@@ -3,7 +3,7 @@
     {
       "name": "dailygardenguide",
       "adapter": "sqlite3",
-      "filename": "./dailygardenguide.db",
+      "filename": "/home/emerald/repos/dailygardenguide/garden.db",
       "projectPaths": ["/home/emerald/repos/dailygardenguide"]
     }
   ],

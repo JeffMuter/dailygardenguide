@@ -1,6 +1,9 @@
 -- Daily Garden Guide Database Schema
 -- SQLite3
--- Users table
+SELECT
+  email
+FROM
+  -- Users table
 CREATE TABLE users (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   email TEXT NOT NULL UNIQUE,
