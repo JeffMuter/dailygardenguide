@@ -4,4 +4,4 @@ SELECT
 FROM
   gardens
 WHERE
-  user_id = ?;
+  user_id = ?

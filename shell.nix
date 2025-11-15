@@ -65,18 +65,18 @@ pkgs.mkShell {
 
     db-migrate() {
       echo "📊 Running migrations..."
-      goose -dir db/migrations sqlite3 ./garden.db up
+      goose -dir db/migrations sqlite3 ./dailygardenguide.db up
     }
 
     db-rollback() {
       echo "⏪ Rolling back one migration..."
-      goose -dir db/migrations sqlite3 ./garden.db down
+      goose -dir db/migrations sqlite3 ./dailygardenguide.db down
     }
 
     db-reset() {
       echo "🔄 Resetting database..."
-      rm -f garden.db
-      goose -dir db/migrations sqlite3 ./garden.db up
+      rm -f dailygardenguide.db
+      goose -dir db/migrations sqlite3 ./dailygardenguide.db up
     }
 
     gen() {
@@ -131,6 +131,6 @@ pkgs.mkShell {
   # Environment variables for development
   ANTHROPIC_API_KEY = "";  # Set in .envrc
   OPENWEATHER_API_KEY = ""; # Set in .envrc
-  DATABASE_URL = "file:./garden.db";
+  DATABASE_URL = "file:./dailygardenguide.db";
   PORT = "8080";
 }
