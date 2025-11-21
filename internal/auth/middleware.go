@@ -1,11 +1,16 @@
 package auth
 
-import "net/http"
+import (
+	"fmt"
+	"net/http"
+)
 
-func handleRequest(protectedHandler http.HandlerFunc) http.HandlerFunc {
-
+// AuthenticateRequest checks if the user is currently logged in.
+func AuthenticateRequest(protectedHandler http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if !checkAuth(r) {
+			fmt.Printf("request failed authentication: %s\n", r.URL)
+			http.Redirect(w, r, "/login", http.StatusSeeOther)
 			return
 		}
 		protectedHandler(w, r)
