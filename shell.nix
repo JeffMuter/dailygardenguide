@@ -60,7 +60,10 @@ pkgs.mkShell {
     echo ""
 
     # Helper functions
-    dev() {
+    run() {
+      echo "⚙️  Generating code..."
+      templ generate
+      sqlc generate
       echo "🚀 Starting development server with live reload..."
       air
     }
@@ -97,10 +100,10 @@ pkgs.mkShell {
       go build -o bin/dailygardenguide ./cmd/server
     }
 
-    export -f dev db-migrate db-rollback db-reset gen test build
+    export -f run db-migrate db-rollback db-reset gen test build
 
     echo "📝 Available commands:"
-    echo "  dev         - Start development server with live reload"
+    echo "  run         - Generate code & start development server"
     echo "  db-migrate  - Run database migrations"
     echo "  db-rollback - Roll back last migration"
     echo "  db-reset    - Reset database (destructive)"

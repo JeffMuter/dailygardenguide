@@ -23,15 +23,14 @@ export AWS_SECRET_ACCESS_KEY="xxx"
 
 # Initialize and start
 db-migrate
-gen
-dev
+run
 ```
 
 Visit http://localhost:8080
 
 ## Commands
 
-- `dev` - Start with live reload
+- `run` - Generate code & start with live reload
 - `gen` - Generate templ + sqlc code
 - `build` - Build production binary
 - `test` - Run tests

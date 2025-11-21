@@ -1,11 +1,13 @@
 package main
 
 import (
+	"dailygardenguide/internal/auth"
 	"dailygardenguide/internal/router"
 	"fmt"
 	"log"
 	"net/http"
 	"os"
+	"time"
 )
 
 func main() {
@@ -15,6 +17,13 @@ func main() {
 	// Set up HTTP routes
 	mux := http.NewServeMux()
 	router.SetupRoutes(mux)
+
+	// clears active user session evey 15min
+	ticker := time.NewTicker(15 * time.Minute) // adjust interval as needed
+	defer ticker.Stop()
+	for range ticker.C {
+		auth.RemoveOldSessions()
+	}
 
 	// Serve static files
 	fs := http.FileServer(http.Dir("./static"))
