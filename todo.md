@@ -1,4 +1,7 @@
 0. authentication and auth page
+   - [ ] Create base/layout template for shared HTML structure (scripts, styles)
+   - [ ] Finish registration page functionality
+   - [ ] Wire up login/register form submissions
 
 1. setup homepage
 

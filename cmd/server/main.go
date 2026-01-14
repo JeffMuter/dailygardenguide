@@ -20,10 +20,12 @@ func main() {
 
 	// clears active user session evey 15min
 	ticker := time.NewTicker(15 * time.Minute) // adjust interval as needed
-	defer ticker.Stop()
-	for range ticker.C {
-		auth.RemoveOldSessions()
-	}
+	go func() {
+		defer ticker.Stop()
+		for range ticker.C {
+			auth.RemoveOldSessions()
+		}
+	}()
 
 	// Serve static files
 	fs := http.FileServer(http.Dir("./static"))
